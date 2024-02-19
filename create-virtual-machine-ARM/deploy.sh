@@ -1,5 +1,7 @@
 #!/bin/bash
 
+az group create --name vm-arm-test_group --location eastus
+
 # Set the path to your template file
 templateFile="./template.json"
 # Set the name of the resource group
