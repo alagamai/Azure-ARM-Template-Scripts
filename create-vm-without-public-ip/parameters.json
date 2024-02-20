@@ -1,0 +1,117 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"location": {
+			"value": "eastus"
+		},
+		"networkInterfaceName1": {
+			"value": "vm-arm-test912_z1"
+		},
+		"networkSecurityGroupName": {
+			"value": "vm-arm-test-nsg"
+		},
+		"networkSecurityGroupRules": {
+			"value": [
+				{
+					"name": "RDP",
+					"properties": {
+						"priority": 300,
+						"protocol": "TCP",
+						"access": "Allow",
+						"direction": "Inbound",
+						"sourceAddressPrefix": "*",
+						"sourcePortRange": "*",
+						"destinationAddressPrefix": "*",
+						"destinationPortRange": "3389"
+					}
+				}
+			]
+		},
+		"subnetName": {
+			"value": "default"
+		},
+		"virtualNetworkName": {
+			"value": "vm-arm-test-vnet"
+		},
+		"addressPrefixes": {
+			"value": ["10.0.0.0/16"]
+		},
+		"subnets": {
+			"value": [
+				{
+					"name": "default",
+					"properties": {
+						"addressPrefix": "10.0.0.0/24"
+					}
+				}
+			]
+		},
+		"pipDeleteOption": {
+			"value": "Delete"
+		},
+		"virtualMachineName": {
+			"value": "vm-arm-test"
+		},
+		"virtualMachineName1": {
+			"value": "vm-arm-test"
+		},
+		"virtualMachineComputerName1": {
+			"value": "vm-arm-test"
+		},
+		"virtualMachineRG": {
+			"value": "vm-arm-test_group"
+		},
+		"osDiskType": {
+			"value": "StandardSSD_LRS"
+		},
+		"osDiskDeleteOption": {
+			"value": "Delete"
+		},
+		"virtualMachineSize": {
+			"value": "Standard_B1s"
+		},
+		"nicDeleteOption": {
+			"value": "Delete"
+		},
+		"hibernationEnabled": {
+			"value": false
+		},
+		"adminUsername": {
+			"value": "alagamai"
+		},
+		"adminPassword": {
+			"value": "Pass@123456789"
+		},
+		"patchMode": {
+			"value": "AutomaticByPlatform"
+		},
+		"enableHotpatching": {
+			"value": true
+		},
+		"rebootSetting": {
+			"value": "IfRequired"
+		},
+		"securityType": {
+			"value": "TrustedLaunch"
+		},
+		"secureBoot": {
+			"value": true
+		},
+		"vTPM": {
+			"value": true
+		},
+		"virtualMachine1Zone": {
+			"value": "1"
+		},
+		"healthExtensionProtocol": {
+			"value": "http"
+		},
+		"healthExtensionPort": {
+			"value": 80
+		},
+		"healthExtensionRequestPath": {
+			"value": "/"
+		}
+	}
+}
